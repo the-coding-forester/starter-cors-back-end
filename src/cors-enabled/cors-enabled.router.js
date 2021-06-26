@@ -3,6 +3,8 @@ const controller = require("./cors-enabled.controller");
 const methodNotAllowed = require("../errors/methodNotAllowed");
 const cors = require("cors");
 
+router.use(cors())
+
 router
   .route("/:corsId")
   .get(controller.read)
